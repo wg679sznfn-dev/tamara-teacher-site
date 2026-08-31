@@ -1,0 +1,89 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Сайт учителя Тамара Салмановна</title><style>
+:root{--cream:#fbf5e9;--card:#fffdf7;--sage:#82957e;--sage-dark:#61765f;--brown:#5b5148;--line:#e6dece;--accent:#c58b75}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:Arial,sans-serif;line-height:1.55}
+a{text-decoration:none;color:inherit}.site-header{background:rgba(255,253,247,.97);border-bottom:1px solid var(--line);padding:18px 16px}
+.header-inner{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{font-size:25px;font-weight:700;color:var(--sage-dark)}.brand small{display:block;font-size:13px;font-weight:400;color:var(--brown)}
+.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.nav a,.btn{background:var(--sage);color:#fff;padding:10px 16px;border-radius:24px;display:inline-block;border:0;cursor:pointer;font:inherit}
+.hero{max-width:1050px;margin:24px auto 0;padding:42px 24px;text-align:center;background:linear-gradient(135deg,#edf2e9,#fffaf0);border-radius:30px}
+.hero h1{margin:0;color:var(--sage-dark);font-size:clamp(34px,8vw,58px)}.hero p{font-size:19px;margin:14px auto 22px;max-width:650px}
+.container{max-width:1050px;margin:auto;padding:18px 16px 50px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 8px 24px rgba(80,70,55,.06)}
+.card h2{margin-top:0;color:var(--accent)}.quick{text-align:center}.quick .icon{font-size:28px}
+.section{scroll-margin-top:30px}footer{text-align:center;padding:24px;background:var(--sage-dark);color:#fff}
+input,textarea{width:100%;padding:13px;border:1px solid var(--line);border-radius:14px;background:#fff;font:inherit;margin:7px 0 12px}
+.login-wrap,.panel{max-width:760px;margin:30px auto;padding:16px}.login-card,.panel-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 8px 24px rgba(80,70,55,.07);margin-bottom:18px}
+.login-card h1,.panel-card h1{color:var(--sage-dark)}
+@media(max-width:800px){.header-inner{flex-direction:column}.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.nav a{padding:9px 12px}.hero{margin:12px 10px 0;padding:32px 16px;border-radius:24px}.container{padding:10px}.cards{grid-template-columns:1fr}.card{padding:19px}}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.gallery figure{margin:0;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.gallery figcaption{padding:9px 11px;font-size:14px}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+.teacher-photo{display:flex;align-items:center;gap:26px;max-width:1050px;margin:22px auto 0;padding:24px 26px}
+.teacher-photo-image{width:180px;min-width:180px;height:180px;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#edf2e9,#f7efe3);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+.teacher-photo-image img{width:100%;height:100%;object-fit:cover}
+.teacher-photo-image #teacherPlaceholder{font-size:58px}
+.teacher-photo-text h2{margin:4px 0 8px;color:var(--sage-dark);font-size:34px}
+.teacher-photo-text p{margin:0;font-size:18px}
+.eyebrow{font-size:14px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:700}
+@media(max-width:600px){.teacher-photo{flex-direction:column;text-align:center}.teacher-photo-image{width:170px;min-width:170px;height:170px}}
+</style></head><body>
+<header class="site-header"><div class="header-inner"><div class="brand">🌿 Тамара Салмановна<small>Сайт учителя</small></div>
+<nav class="nav"><a href="#home">Главная</a><a href="#about">Обо мне</a><a href="#schedule">Расписание</a><a href="#news">Объявления</a><a href="#photos">Фотоальбом</a><a href="login.html">🔐 Вход учителя</a></nav></div></header>
+<section id="home" class="hero"><h1>Добро пожаловать!</h1><p>Здесь вы найдёте расписание занятий, новости, объявления и фотографии.</p></section>
+
+<section id="teacherPhoto" class="teacher-photo card section">
+  <div class="teacher-photo-image">
+    <div id="teacherPlaceholder">🌿</div>
+    <img id="teacherImg" alt="Фото Тамары Салмановны" style="display:none">
+  </div>
+  <div class="teacher-photo-text">
+    <p id="teacherCaption">Добро пожаловать!</p>
+  </div>
+</section>
+
+<main class="container"><div class="cards">
+<a class="card quick" href="#schedule"><div class="icon">📅</div><h2>Расписание</h2><p>Актуальное расписание занятий</p></a>
+<a class="card quick" href="#news"><div class="icon">📢</div><h2>Объявления</h2><p>Важная информация</p></a>
+<a class="card quick" href="#about"><div class="icon">📖</div><h2>Обо мне</h2><p>Информация об учителе</p></a>
+<a class="card quick" href="#photos"><div class="icon">📷</div><h2>Фотоальбом</h2><p>Фотографии и события</p></a></div>
+<section id="about" class="card section"><h2>🌿 Обо мне</h2><p id="aboutContent">Добро пожаловать на сайт Тамары Салмановны.</p></section>
+<section id="schedule" class="card section"><h2>📅 Расписание занятий</h2><div id="scheduleContent">Расписание пока не добавлено</div></section>
+<section id="news" class="card section"><h2>📢 Новости и объявления</h2><div id="newsContent">Новостей пока нет</div></section>
+<section id="photos" class="card section">
+<h2>📷 Фотоальбом</h2>
+<div id="gallery" class="gallery"><p>Фотографий пока нет</p></div>
+</section></main>
+<footer>🌿 Сайт учителя Тамара Салмановна</footer>
+<script src="cloud.js"></script>
+<script>
+(async function(){
+  const defaults={about:'Добро пожаловать на сайт учителя.',schedule:'',news:'',teacher_photo_url:null,teacher_caption:'',photos:[]};
+  try{
+    const d=Object.assign(defaults, await cloudGet() || {});
+    document.getElementById('scheduleContent').innerHTML=d.schedule||'Расписание пока не добавлено';
+    document.getElementById('newsContent').innerHTML=d.news||'Новостей пока нет';
+    document.getElementById('aboutContent').innerHTML=d.about||defaults.about;
+    if(d.teacher_photo_url){
+      document.getElementById('teacherImg').src=d.teacher_photo_url;
+      document.getElementById('teacherImg').style.display='block';
+      document.getElementById('teacherPlaceholder').style.display='none';
+      if(d.teacher_caption) document.getElementById('teacherCaption').textContent=d.teacher_caption;
+    }
+    const gallery=document.getElementById('gallery');
+    const photos=Array.isArray(d.photos)?d.photos:[];
+    if(photos.length){
+      gallery.innerHTML=photos.map(p=>'<figure><img src="'+p.url+'" alt="Фото"><figcaption></figcaption></figure>').join('');
+    }
+  }catch(e){
+    document.getElementById('scheduleContent').textContent='Не удалось загрузить данные. Обновите страницу.';
+    document.getElementById('newsContent').textContent='Не удалось загрузить данные. Обновите страницу.';
+  }
+})();
+</script>
+</body></html>
