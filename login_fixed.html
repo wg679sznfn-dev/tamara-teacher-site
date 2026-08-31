@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вход учителя</title>
+<style>
+body{margin:0;background:#fbf5e9;color:#5b5148;font-family:Arial,sans-serif}
+.wrap{max-width:520px;margin:70px auto;padding:20px}
+.card{background:#fffdf7;border:1px solid #e6dece;border-radius:28px;padding:30px;box-shadow:0 8px 24px rgba(80,70,55,.07)}
+h1{color:#61765f}input{width:100%;box-sizing:border-box;padding:13px;border:1px solid #e6dece;border-radius:14px;margin:7px 0 14px;font:inherit}
+button,a{background:#82957e;color:white;padding:11px 17px;border:0;border-radius:24px;text-decoration:none;cursor:pointer;font:inherit}
+.note{font-size:14px}.error{color:#a44;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+<h1>🔐 Вход учителя</h1>
+<p>Введите логин и пароль для входа в панель учителя.</p>
+<label>Логин</label>
+<input id="login" type="text" autocomplete="username" placeholder="Логин">
+<label>Пароль</label>
+<input id="password" type="password" autocomplete="current-password" placeholder="Пароль">
+<button onclick="login()">Войти</button>
+<a href="index.html">На сайт</a>
+<p id="msg" class="error"></p>
+</div></div>
+<script>
+function login(){
+  const loginValue=document.getElementById('login').value.trim();
+  const passwordValue=document.getElementById('password').value;
+  if(loginValue==='tamara062' && passwordValue==='tamara2026'){
+    sessionStorage.setItem('teacher_auth','1');
+    location.href='panel.html';
+  }else{
+    document.getElementById('msg').textContent='Неверный логин или пароль.';
+  }
+}
+</script>
+</body>
+</html>
